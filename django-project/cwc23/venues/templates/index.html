@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie-edge" />
+    <title>ICC Cricket World Cup 2023 - Home</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- MDB -->
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.min.css' %}">
+</head>
+<body>
+<!-- Main Navigation -->
+<header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+      <a class="navbar-brand" href="#">
+          <img src="https://resources.pulse.icc-cricket.com/ICC/photo/2023/04/02/57453dd9-5caf-43de-9cd8-0f8ab5b27cf3/india-2023-logo.PNG" width="30" height="30" class="d-inline-block align-top" alt="">
+        </a>
+      <a class="navbar-brand" href="{% url "index" %}">ICC Cricket World Cup 2023</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url "index" %}">Players<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url "index" %}">Team</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url "venues" %}">Venues<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url "index" %}">Fixtures</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Prediction</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+    <!-- Navbar -->
+</header>
+<!-- Main Navigation -->
+
+<!-- Main layout -->
+<main class="my-5">
+    <div class="container">
+        <!-- Section: Content -->
+        <section class="text-center">
+            <h4 class="mb-5"><strong>Home</strong></h4>
+
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                          <img src="https://tds-images.thedailystar.net/sites/default/files/styles/big_202/public/uploads/2023/11/05/109.png?itok=_lUXl4n8&timestamp=1699163680" class="img-fluid" style="width: 100%; height: 400px;"  />
+                            <h5 class="card-title">India to bat on top of the table in the clash</h5>
+                            <p class="card-text">
+                                Read the latest update on the match between India and another team. Find out who is batting on top of the table.
+                            </p>
+                            <a href="https://www.thedailystar.net/sports/sports-special/icc-cricket-world-cup-2023/news/india-bat-top-the-table-clash-3462131" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                          <img src="https://tds-images.thedailystar.net/sites/default/files/styles/big_202/public/images/2023/11/05/adam_zampa.jpg?itok=AiJYYcsD&timestamp=1699153778" class="img-fluid" style="width: 100%; height: 400px;"  />
+                            <h5 class="card-title">Ponting reveals his top three players in the World Cup so far</h5>
+                            <p class="card-text">
+                                Ricky Ponting shares his insights into the top-performing players in the World Cup. Discover who made his list.
+                            </p>
+                            <a href="https://www.thedailystar.net/sports/sports-special/icc-cricket-world-cup-2023/news/ponting-reveals-his-top-three-players-world-cup-so-far-3462001" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4 class="mb-4"><strong>Fixtures</strong></h4>
+
+            <table class="table table-primary">
+              <thead>
+                  <tr>
+                      <th scope="col">Team 1</th>
+                      <th scope="col">VS</th>
+                      <th scope="col">Team 2</th>
+                      <th scope="col">Venue</th>
+                      <th scope="col">Date</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>England</td>
+                      <td>VS</td>
+                      <td>New Zealand</td>
+                      <td>Narendra Modi Stadium, Ahmedabad</td>
+                      <td>Thu, 05 Oct '23</td>
+                  </tr>
+                  <tr>
+                      <td>Pakistan</td>
+                      <td>VS</td>
+                      <td>Netherlands</td>
+                      <td>HPCA Stadium, Himachal Pradesh</td>
+                      <td>Sat, 07 Oct '23</td>
+                  </tr>
+                  <tr>
+                      <td>South Africa</td>
+                      <td>VS</td>
+                      <td>Sri Lanka</td>
+                      <td>Arun Jaitley Stadium, Delhi</td>
+                      <td>Sun, 08 Oct '23</td>
+                  </tr>
+                  <tr>
+                      <td>India</td>
+                      <td>VS</td>
+                      <td>Australia</td>
+                      <td>MA Chidambaram Stadium, Tamil Nadu</td>
+                      <td>Sun, 08 Oct '23</td>
+                  </tr>
+                  <tr>
+                      <td>New Zealand</td>
+                      <td>VS</td>
+                      <td>Netherlands</td>
+                      <td>Rajiv Gandhi Stadium, Hyderabad</td>
+                      <td>Mon, 09 Oct '23</td>
+                  </tr>
+              </tbody>
+          </table>
+        </section>
+        <!-- Section: Content -->
+    </div>
+</main>
+<!-- Main layout -->
+
+<!-- Footer -->
+<footer class="bg-light text-lg-start">
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+<!-- MDB -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- Custom scripts -->
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

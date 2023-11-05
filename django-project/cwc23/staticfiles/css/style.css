@@ -1,0 +1,24 @@
+/* style.css */
+body {
+    background-color: #007BFF; /* Blue background */
+    color: #fff; /* White text */
+    padding: 20px;
+}
+
+.venue-card {
+    background-color: #fff; /* White card background */
+    margin: 10px;
+}
+
+.card-title {
+    color: #007BFF; /* Blue title color */
+}
+
+.card-text {
+    color: #000000; /* Dark text color */
+}
+
+.card-body {
+    font-size: 14px; /* Smaller text size */
+    padding: 1rem;
+}

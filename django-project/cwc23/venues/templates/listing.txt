@@ -1,0 +1,18 @@
+ Volume in drive D is New Volume
+ Volume Serial Number is 9866-C728
+
+ Directory of D:\ICC Men's Cricket World Cup 2023
+
+10/29/2023  12:15 AM    <DIR>          .
+10/29/2023  12:15 AM    <DIR>          ..
+10/29/2023  12:03 AM               103 admin.py
+10/20/2023  09:10 PM           514,223 img1.jpg
+10/29/2023  12:15 AM                 0 listing.txt
+10/29/2023  12:02 AM               263 models.py
+10/29/2023  12:06 AM               147 settings.py
+10/20/2023  09:54 PM               444 style.css
+10/29/2023  12:04 AM               183 urls.py
+10/29/2023  12:04 AM             3,718 venues.html
+10/29/2023  12:03 AM               208 views.py
+               9 File(s)        519,289 bytes
+               2 Dir(s)   5,020,708,864 bytes free

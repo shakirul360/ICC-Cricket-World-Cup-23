@@ -1,0 +1,18 @@
+ Volume in drive C is Windows-SSD
+ Volume Serial Number is 80CB-DC87
+
+ Directory of C:\Users\Leeon\Desktop\pydjango\django-project\cwc23
+
+11/01/2023  01:44 PM    <DIR>          .
+11/01/2023  01:44 PM    <DIR>          ..
+10/31/2023  11:53 PM    <DIR>          cwc23
+11/01/2023  01:44 PM           139,264 db.sqlite3
+11/01/2023  01:46 PM                 0 listing.txt
+10/31/2023  11:48 PM               683 manage.py
+11/01/2023  01:43 PM    <DIR>          media
+11/01/2023  12:56 PM    <DIR>          static
+11/01/2023  01:39 PM    <DIR>          staticfiles
+11/01/2023  12:46 AM    <DIR>          venues
+11/01/2023  01:43 PM    <DIR>          venue_images
+               3 File(s)        139,947 bytes
+               8 Dir(s)   2,882,617,344 bytes free
