@@ -30,50 +30,54 @@
 <!-- Main Navigation -->
 <header>
   <!-- Navbar -->
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
-      <a class="navbar-brand" href="#">
-          <img src="https://resources.pulse.icc-cricket.com/ICC/photo/2023/04/02/57453dd9-5caf-43de-9cd8-0f8ab5b27cf3/india-2023-logo.PNG" width="30" height="30" class="d-inline-block align-top" alt="">
-      </a>
-      <a class="navbar-brand" href="{% url "index" %}">ICC Cricket World Cup 2023</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
+    <a class="navbar-brand" href="#">
+        <img src="https://resources.pulse.icc-cricket.com/ICC/photo/2023/04/02/57453dd9-5caf-43de-9cd8-0f8ab5b27cf3/india-2023-logo.PNG" width="30" height="30" class="d-inline-block align-top" alt="">
+    </a>
+    <a class="navbar-brand" href="{% url "index" %}">ICC Cricket World Cup 2023</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                  <a class="nav-link" href="{% url "index" %}">Players<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{% url "index" %}">Team</a>
-              </li>
-              <li class="nav-item active">
-                  <a class="nav-link" href="{% url "venues" %}">Venues<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{% url 'matches' %}">Fixtures</a>
-              </li>
-          </ul>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url "index" %}">Players<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url "index" %}">Team</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url "venues" %}">Venues<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'matches' %}">Fixtures</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'news' %}">News</a>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="d-flex">
+      {% if user.is_authenticated %}
+      <div class="btn-group">
+          <button class="btn btn-outline-success" id="profileButton">{{ user.username }}</button>
+          <a href="{% url 'logout' %}">
+              <button class="btn btn-outline-danger" id="logoutButton">Logout</button>
+          </a>
       </div>
-      
-      <div class="d-flex">
-        {% if user.is_authenticated %}
-        <div class="btn-group">
-            <button class="btn btn-outline-success" id="profileButton">{{ user.username }}</button>
-            <a href="{% url 'logout' %}">
-                <button class="btn btn-outline-danger" id="logoutButton">Logout</button>
-            </a>
-        </div>
-    {% else %}
-        <a href="{% url 'login' %}">
-            <button class="btn btn-outline-success" id="loginButton">Login</button>
-        </a>
-        <a href="{% url 'sign' %}">
-            <button class="btn btn-outline-success" id="registerButton">Register</button>
-        </a>
-    {% endif %}
-      </div>
-  </nav>
+  {% else %}
+      <a href="{% url 'login' %}">
+          <button class="btn btn-outline-success" id="loginButton">Login</button>
+      </a>
+      <a href="{% url 'sign' %}">
+          <button class="btn btn-outline-success" id="registerButton">Register</button>
+      </a>
+  {% endif %}
+    </div>
+</nav>
   <!-- Navbar -->
 </header>
 
