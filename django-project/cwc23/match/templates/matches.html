@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link rel="stylesheet" href="/static/css/flag-icons-main/css/flag-icons.min.css"/>
+<link rel="preconnect" href="https://firebasestorage.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+<link href="/static/css/style2.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+
+
+
+
+<body>
+
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+            <a class="navbar-brand" href="#">
+                <img src="https://resources.pulse.icc-cricket.com/ICC/photo/2023/04/02/57453dd9-5caf-43de-9cd8-0f8ab5b27cf3/india-2023-logo.PNG" width="30" height="30" class="d-inline-block align-top" alt="">
+            </a>
+            <a class="navbar-brand" href="{% url "index" %}">ICC Cricket World Cup 2023</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url "index" %}">Players<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url "index" %}">Team</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{% url "venues" %}">Venues<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'matches' %}">Fixtures</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="d-flex">
+              {% if user.is_authenticated %}
+              <div class="btn-group">
+                  <button class="btn btn-outline-success" id="profileButton">{{ user.username }}</button>
+                  <a href="{% url 'logout' %}">
+                      <button class="btn btn-outline-danger" id="logoutButton">Logout</button>
+                  </a>
+              </div>
+          {% else %}
+              <a href="{% url 'login' %}">
+                  <button class="btn btn-outline-success" id="loginButton">Login</button>
+              </a>
+              <a href="{% url 'sign' %}">
+                  <button class="btn btn-outline-success" id="registerButton">Register</button>
+              </a>
+          {% endif %}
+            </div>
+        </nav>
+        <!-- Navbar -->
+      </header>
+
+    <div id="root-container" style="margin: 0;">
+
+        <div id="content-container">
+            <form method="get">
+                <input type="text" name="search" value="" />
+                <input type="submit" value="Search" />
+            </form>
+        </div>
+        
+            {% for n in matches %}
+            
+           
+        <div id="container-id-7-">
+            <p id="text-id-1-">{{n.match_result}}</p>
+        </div>
+        <div id="content-container" style="margin-bottom: 10px;">
+            <div id="section-id-19-" data-element-type="section" contenteditable="false">
+                <div id="container-id-8-" data-element-type="container">
+                    
+                    <div id="container-id-9-" data-element-type="container">
+                        <p id="text-id-10-" data-element-type="text">
+                            <span id="element-id-11-">Match Number: {{n.match_no}}</span>
+                        </p>
+                        <p id="text-id-12-" data-element-type="text">{{n.match_date}}
+                            <br>
+                            {{n.match_your_time}} (Your Time)
+                        </p>
+                    </div>
+                    <div id="container-id-13-" data-element-type="container">
+                        <p id="text-id-15-" data-element-type="text"><span class="{{n.match_team1_flag}}"></span> {{n.match_team1}}</p>
+                        <p id="text-id-15-" data-element-type="text"><span class="{{n.match_team2_flag}}"></span> {{n.match_team2}}</p>
+                    </div>
+                    <div id="container-id-16-" data-element-type="container">
+                        <p id="text-id-17-" data-element-type="text">{{n.match_venue}}</p>
+                        <p id="text-id-18-" data-element-type="text">{{n.match_local_time}} (Local)</p>
+                        
+                        <iframe width="186" height="105" src="{{n.match_highlights}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        {% empty %}
+        No match found
+        {% endfor %}
+                        
+    </div>
+      
+</body>
+</html>
+    
+

@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from venues import views as venues_views
+from match import views as match_views
 
 from django.urls import path, include
 
@@ -26,6 +27,7 @@ urlpatterns = [
     path('venues/',include('venues.urls')),
     path('account/',include('users_app.urls')),
     path('', venues_views.index, name = 'index'),
+    path('matches/', match_views.matches, name='matches'),
     #path('account/', include('users.urls'))
     
     
