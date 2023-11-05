@@ -20,6 +20,9 @@ from django.conf.urls.static import static
 from venues import views as venues_views
 from match import views as match_views
 from news import views as news_views
+from player import views as player_views
+from teams import views as teams_views
+
 
 from django.urls import path, include
 
@@ -30,7 +33,11 @@ urlpatterns = [
     path('', venues_views.index, name = 'index'),
     path('matches/', match_views.matches, name='matches'),
     path('news/', news_views.lateNews, name='news'),
-    #path('account/', include('users.urls'))
+    path('player/', player_views.players, name='players'),
+    path('teams/', teams_views.teams, name='teams'),
+
+
+
     
     
 ]

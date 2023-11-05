@@ -44,7 +44,10 @@ INSTALLED_APPS = [
     "crispy_forms",
     "crispy_bootstrap5",
     'match',
-    'news'
+    'news',
+    'player', 
+    'teams'
+
 ]
 
 MIDDLEWARE = [
